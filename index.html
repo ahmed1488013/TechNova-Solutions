@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        /* Header */
+        header {
+            background-color: #1A1A1A;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 50px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        header:hover {
+            background-color: #FF5733;
+        }
+
+        /* Navigation */
+        nav {
+            text-align: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FF5733;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .services-section h2 {
+            color: #FF5733;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            width: 280px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card h3 {
+            color: #FF5733;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 60px 20px;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        .projects-section h2 {
+            color: #FF5733;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 320px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card h3 {
+            color: #FF5733;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .project-card a {
+            color: #FF5733;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .contact-section h2 {
+            color: #FF5733;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .contact-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #FF3E00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-container, .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card, .project-card {
+                width: 80%;
+                margin: 20px 0;
+            }
+
+            .contact-form {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            .services-section h2, .projects-section h2, .contact-section h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TechNova Solutions</h1>
+        <p>Innovative Tech Solutions for Your Business</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>We create dynamic, responsive websites tailored to your business needs.</p>
+            </div>
+            <div class="service-card">
+                <h3>App Development</h3>
+                <p>Building powerful mobile apps for iOS and Android platforms.</p>
+            </div>
+            <div class="service-card">
+                <h3>Cloud Solutions</h3>
+                <p>Offering cloud solutions for data storage and performance optimization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>Our Featured Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Project A</h3>
+                <p>An advanced e-commerce platform with payment integration.</p>
+                <p><a href="#">View Project</a></p>
+            </div>
+            <div class="project-card">
+                <h3>Project B</h3>
+                <p>A mobile app for real-time inventory management.</p>
+                <p><a href="#">View Project</a></p>
+            </div>
+            <div class="project-card">
+                <h3>Project C</h3>
+                <p>Enterprise solutions for improving productivity and automating workflows.</p>
+                <p><a href="#">View Project</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</body>
+</html>
